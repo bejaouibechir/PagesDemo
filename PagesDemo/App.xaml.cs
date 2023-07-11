@@ -2,6 +2,7 @@
 //#define flyoutpage
 //#define tabbedpage
 //#define navigationpage
+#define shell
 
 namespace PagesDemo;
 
@@ -30,6 +31,9 @@ public partial class App : Application
 
 #if tabbedpage
         MainPage = new TabbedPageDemo();
+#endif
+#if shell
+       MainPage = new AppShell();
 #endif
 
 

@@ -6,9 +6,86 @@
     xmlns:local="clr-namespace:PagesDemo"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+    <ShellContent Title="MainPage" Icon="dotnet_bot.svg"
+                  ContentTemplate="{DataTemplate local:MainPage}"/>
+
+    <!--Important: Repalce Shell.FlyoutBehavior="Disabled" by 
+    Shell.FlyoutBehavior="Flyout" for the Flyout Demo-->
+
+
+    <!--To Test content page with shell uncomment this--> 
+    <!--<ShellContent
         Title="Hello, World!"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
+   
+    <!--To Test tab page with shell uncomment this-->
+    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Home Page"
+        Icon="home.png"
+        FlyoutIcon="home.png"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
 
+        <ShellContent
+        Title="Second Page"
+        Icon="user.png"
+        FlyoutIcon="user.png"
+        ContentTemplate="{DataTemplate local:UserPage}"
+        Route="UserPage" />
+
+        <ShellContent
+        Title="Third Page"
+        Icon="settings.png"
+        FlyoutIcon="settings.png"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
+    </FlyoutItem>-->
+    <!--To Test tab page (A second technique) with shell uncomment this-->
+    <!--<TabBar>
+        <Tab
+        Title="Home Page"
+        Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}"
+                          Route="HomePage"/>
+        </Tab>
+        <Tab 
+            Title="Second Page"
+            Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate local:UserPage}"
+                          Route="UserPage" />
+        </Tab>
+        <Tab Icon="settings.png"
+        Title="Third Page">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
+        </Tab>
+    </TabBar>-->
+
+    <!--To Test flayout page with shell uncomment this-->
+    <!--<Shell.FlyoutHeader>
+        <Label Padding="20" Text="Ce ci est l'entête" FontSize="20" />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home"  Icon="home.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="User" Icon="user.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:UserPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Icon="settings.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <Shell.FlyoutFooter>
+        <Label Padding="20" Text="Ce ci est le pied" FontSize="20" />
+    </Shell.FlyoutFooter>-->
 </Shell>
