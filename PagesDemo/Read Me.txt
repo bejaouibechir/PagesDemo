@@ -1,0 +1,3 @@
+﻿This is a maui  projet Demo 
+To test the differents types of pages go to App.xaml.cs 
+and comment/uncomment the #define precompilers
