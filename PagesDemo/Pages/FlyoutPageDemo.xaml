@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.FlyoutPageDemo"
+             Title="FlyoutPageDemo"
+            FlyoutLayoutBehavior="Split">
+    <!-- Flyout Menu -->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Button Text="Menu Item 1" x:Name="menu1btn"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="Button_Clicked" />
+                <Button Text="Menu Item 2" 
+                        VerticalOptions="CenterAndExpand"  x:Name="menu2btn"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="Button_Clicked" />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <!-- Main Detail Page -->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Main Page">
+                    <StackLayout>
+                        <Label Text="Welcome to the Main Page!" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

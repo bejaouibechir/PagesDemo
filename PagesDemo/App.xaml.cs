@@ -22,11 +22,12 @@ public partial class App : Application
 
 
 #if navigationpage
-        var navPage = new NavigationPage(new MainPage());
-
+       var navpage = new NavigationPage(new RootPage());
+		MainPage = navpage;	
+		/*var navPage = new NavigationPage(new MainPage());
 		  navPage.BarBackground = Colors.Chocolate;
 		  navPage.BarTextColor = Colors.White;
-		  MainPage = navPage;
+		  MainPage = navPage;*/
 #endif
 
 #if tabbedpage

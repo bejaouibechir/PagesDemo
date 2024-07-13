@@ -1,4 +1,4 @@
-﻿#define shell
+﻿//#define shell
 
 namespace PagesDemo;
 
