@@ -8,5 +8,7 @@
             Text="The home page!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button Margin="20" Text="Ajouter un utilisateur" Clicked="AddFlyoutItem_Clicked"/>
+        <Button  Margin="20" Text="Supprimer un utilisateur" Clicked="RemoveFlyoutItem_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
